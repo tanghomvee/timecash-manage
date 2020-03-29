@@ -52,11 +52,11 @@ public class ApplyInfoCtrl extends HttpServlet {
             }else{
                 String pageNum = req.getParameter("pageNum");
                 try{
-                    Integer total =  DBUtil.getTotal();
+                    //Integer total =  DBUtil.getTotal();
                     List<ApplyInfo> infos = DBUtil.list(StringUtils.isEmpty(pageNum) ? 0 : Integer.valueOf(pageNum));
                     Map<String,Object> data = new HashMap<>();
-                    data.put("pages" , DBUtil.getPage(total));
-                    data.put("total" , total);
+                   // data.put("pages" , DBUtil.getPage(total));
+                  //  data.put("total" , total);
                     data.put("data" ,infos);
 
                     msg = Msg.ok(data);

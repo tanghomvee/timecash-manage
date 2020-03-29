@@ -36,7 +36,7 @@ public class DBUtil {
     public static Integer save(ApplyInfo applyInfo) {
 
         // 执行SQL语句
-        String sql = "INSERT INTO `bitwatch`.`t_apply_info` " +
+        String sql = "INSERT INTO `timecash`.`t_apply_info` " +
                 "(`user_name`, `phone_num`, `email`, `addr`, `remark`, `create_time`) " +
                 "VALUES (?, ?, ?, ?, ?, ?);";
         // 从连接池中取出连接
@@ -68,7 +68,8 @@ public class DBUtil {
 
         int startIndex = (pageNum - 1) > 0 ? (pageNum-1)* PAGE_SIZE : 0;
         // 执行SQL语句
-        String sql = "select *  from `timecash`.`t_apply_info`  order by id desc LIMIT  " + startIndex + "," + PAGE_SIZE;
+//        String sql = "select *  from `timecash`.`t_apply_info`  order by id desc LIMIT  " + startIndex + "," + PAGE_SIZE;
+        String sql = "select *  from `timecash`.`t_apply_info`  order by id desc   " ;
         // 从连接池中取出连接
         Connection conn = null;
         PreparedStatement pstmt = null;
