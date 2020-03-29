@@ -87,7 +87,9 @@ public class DBUtil {
                 applyInfo.setEmail(rs.getString("email"));
                 applyInfo.setAddr(rs.getString("addr"));
                 applyInfo.setRemark(rs.getString("remark"));
-                applyInfo.setCreateTime(new java.util.Date(rs.getTimestamp("create_time").getTime()));
+                if (rs.getTimestamp("create_time") != null){
+                    applyInfo.setCreateTime(new java.util.Date(rs.getTimestamp("create_time").getTime()));
+                }
             }
 
         }catch (Exception ex){
