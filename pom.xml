@@ -17,7 +17,7 @@
         <druid.version>1.1.21</druid.version>
         <servlet.version>4.0.1</servlet.version>
         <lombok.version>1.18.0</lombok.version>
-        <mysql.version>8.0.18</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
         <!-- Plugin的属性定义 -->
         <maven-source-plugin.version>3.0.0</maven-source-plugin.version>
 
